@@ -5,10 +5,9 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.17.0.0
 Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Peter Burtenshaw Plymouth University Flex license: MDK-ARM Professional: 100 user(s) (mdk_pro) Operation stops: 5 Sep 2017
- 
+License Information: Peter Burtenshaw Plymouth University Flex license: error obtaining information 
 Tool Versions:
-Toolchain:       MDK-ARM Professional: 100 user(s)  Version: 5.17
+Toolchain:       MDK-Lite  Version: 5.17
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 1 (build 61)
 Assembler:       Armasm.exe V5.06 update 1 (build 61)
@@ -40,23 +39,33 @@ main.cpp(86): warning:  #177-D: variable "sampling" was declared but never refer
   	bool sampling;
 main.cpp(87): warning:  #177-D: variable "f1" was declared but never referenced
   	float f1 =0;
+main.cpp(88): warning:  #177-D: variable "i1" was declared but never referenced
+  	int i1 =0;
 main.cpp(89): warning:  #177-D: variable "i2" was declared but never referenced
   	int i2 =0;
 main.cpp(90): warning:  #177-D: variable "i3" was declared but never referenced
   	int i3 =0;
-main.cpp(261): warning:  #1-D: last line of file ends without a newline
+main.cpp(91): warning:  #177-D: variable "s1" was declared but never referenced
+  	char s1 [50];
+main.cpp(92): warning:  #177-D: variable "s2" was declared but never referenced
+  	char s2 [10];
+main.cpp(93): warning:  #177-D: variable "s3" was declared but never referenced
+  	char s3 [10];
+main.cpp(94): warning:  #177-D: variable "s4" was declared but never referenced
+  	char s4 [10];
+main.cpp(270): warning:  #1-D: last line of file ends without a newline
   }
-main.cpp: 9 warnings, 0 errors
+main.cpp: 14 warnings, 0 errors
 linking...
-Program Size: Code=66516 RO-data=5396 RW-data=372 ZI-data=19468  
-".\BUILD\Coursework.axf" - 0 Error(s), 9 Warning(s).
+Program Size: Code=65612 RO-data=5396 RW-data=372 ZI-data=19468  
+".\BUILD\Coursework.axf" - 0 Error(s), 14 Warning(s).
 
 <h2>Collection of Component include folders:</h2>
   D:\downloads\Coursework_uvision5_NUCLEO_F401RE\Coursework\RTE
   C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:16
+Build Time Elapsed:  00:00:34
 </pre>
 </body>
 </html>

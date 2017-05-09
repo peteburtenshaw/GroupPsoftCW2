@@ -25,8 +25,23 @@ Queue -
 Commands-
     Add each method for each command
     Change input to readchar, printchar, repeat
-Serial interface class to print everything???
-logging! - use as a test harness?
+	
+ROSS -
+	IF STATEMENTS
+		make them again lol
+			maybe make a method to use a bit like this:
+			void compare(char[] user input,char[] string to compare){code in here}
+			nesting them would be preferable, i.e. this one:
+			if (equal to "read")
+				if(equal to "all")
+			
+			
+CRAIG -
+	LOGGING
+		after the computer does something, add a string to a mail queue with a message that you want to print
+		that mail queue goes to thread 4 and prints it there
+		all printing should be done via this thread so think about when logging is turned on/off
+		i've got the serial interface class in place, use that perhaps, maybe make it a string (but strings don't work)
 
 
 NOTES:

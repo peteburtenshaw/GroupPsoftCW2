@@ -91,27 +91,36 @@ void commands(){
 	char s1 [50];
 	char s2 [10];
 	char s3 [10];
-	char s4;
-	string line;
+	char s4 [10];
+	char tempC;
+  char userLine [30];
+  int commandCounter= 0;
+	//inside each successful 'search', clear 'line'. or make a counter for the langth of it and then only check
+		//the number of chars inside it
 	
-
-	while(1) {
-		for(i1 = 0; i1 == 30;i1=i1+1){
-			if(pcSerial.readable()){
-				s4=pcSerial.getc();
-				line = line+s4;
-				pcSerial.putc(s4);
-				cout<<line<<"\n\r";
-				if(s4 == 13){//try with \r
-					strcpy(globalLog,"\n\r");
-					pingSerialOut();
-					break;
-				}
-			}
-		}
+    while(1){
+        
+        while(1){
+            if(pcSerial.readable()){
+                tempC=pcSerial.getc();
+                userLine[commandCounter] = tempC;
+                commandCounter = commandCounter+1;
+                pcSerial.putc(tempC);
+                if(tempC == 13){//try with \r
+                    //strcpy(globalLog,"\n\r");
+                    printf("I think you pressed enter there \n\r");
+                    commandCounter=0;
+                    //pingSerialOut();
+                    break;
+                }
+            }
+        }
+        if(userLine[0]=='R'){
+            printf("R was pressed perhaps \n\r");
+            }
 		//loop here
 		//sscanf(line,"%s %s %s ",s1,s2,s3);
-		printf("%s %s %s\n\r",s1,s2,s3);
+		//printf("%s %s %s\n\r",s1,s2,s3);
 		/*
 		--BELOW ARE STRING COMMANDS
 		//USE STRNCMP INSTEAD : (strncmp (str[n],"R2xx",2) == 0) WHERE str[n] and "R2xx" are strings to compare and 2 is an int of characters to check
@@ -241,7 +250,7 @@ int main() {
 	logging = true;
 	timer.attach( &pingMeasure, 15);
 	clockDTTicker.attach(&callTickTock,1);
-	printf("well something should be happening right about now");
+	printf("well something should be happening right about now\n\r");
 	//Threads:
 	t1 = new Thread();
 	t1->start(thread1);
